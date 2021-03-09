@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Kanban</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="nav-bar">
+    <a class="navbar-brand" href="#">Kanban</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Board</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<body>
+    <div id="boards">
+        <div id="backlog" class="drop-zone">
+            <div class="big-card">
+                <p class="big-card-label">Backlog</p>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="product" class="drop-zone">
+            <div class="big-card">
+                <p class="big-card-label">Product</p>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="development" class="drop-zone">
+            <div class="big-card">
+                <p class="big-card-label">Development</p>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="done" class="drop-zone">
+            <div class="big-card">
+                <p class="big-card-label">Done</p>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./styles.css"></script>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</body>
+</html>
