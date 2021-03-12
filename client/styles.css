@@ -11,57 +11,11 @@ body, html {
   align-items: stretch;
 }
 
-#home-page {
-  background-image: url("mountain2.webp");
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-#home-title {
-  color: whitesmoke;
-  font-size: 4rem;
-  position: absolute;
-  top:  47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-#home-subtitle {
-  color: whitesmoke;
-  position: absolute;
-  top:  57%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-#btn-login {
-  font-size: 1rem;
-  position: absolute;
-  top:  67%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  min-width: 7rem;
-}
 
-#btn-signup {
-  font-size: 1rem;
-  position: absolute;
-  top:  67%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  min-width: 7rem;
 
-}
-
-.background-image {
-  background-image: url("mountain2.webp");
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 #login-page-css {
   height: 100vh;
@@ -132,10 +86,4 @@ body, html {
 
 .card-text {
   font-size:10px; 
-}
-
-.drag-el {
-  background-color: #;
-  margin-bottom: 10px;
-  padding: 5px;
 }
