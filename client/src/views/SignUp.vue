@@ -16,10 +16,6 @@
                             <input type="password" class="form-control" id="signup-password" placeholder="Password">
                             <label for="signup-password">Password</label>
                         </div>
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="signup-username" placeholder="Username">
-                            <label for="signup-username">Username</label>
-                        </div>
                         <div class="row d-flex justify-content-center">
                             <a class="btn mt-3 col-md-7" type="button" href="#" id="btn-login-submit">Sign Up</a>
                         </div>
@@ -31,17 +27,39 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios'
 
+export default {
+    name: 'RegisterPage',
+        props: ["baseUrl", "changePageProp"],
+        data() {
+            return {
+                email: '',
+                password: ''
+            }
+        },
+    methods: {
+        register() {
+            axios({
+                url: `${this.baseUrl}/register`,
+                method: 'POST',
+                data: {
+                    email: this.email,
+                    password: this.password
+                }
+            })
+            .then(({data}) => {
+                console.log(data);
+                this.changePageProp('login')
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        }
+    }
 }
 </script>
 
 <style>
-    .background-image {
-        background-image: url("mountain2.webp");
-        height: 100%; 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+
 </style>

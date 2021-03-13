@@ -16,9 +16,6 @@
                         <div class="row d-flex justify-content-center">
                             <a class="btn mt-3 col-md-7" type="button" href="#" id="btn-login-submit">Login</a>
                         </div>
-                        <div class="row d-flex justify-content-center">
-                            <a class="btn mt-3 col-md-7" type="button" href="#" id="btn-login-signup" @click.prevent="">Sign Up</a>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -27,46 +24,38 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-    name: 'LoginPage',
-    props: ["baseUrl", "changePageProp"],
-    data() {
-        return {
-            login_email: "",
-            login_password: "",
-        }
-    },
-    components: {},
-    methods: {
-        login() {
-            axios({
-                url: `${this.baseUrl}/login`,
-                method: 'POST',
-                data: {
-                    email: this.login_email,
-                    password: this.login_password
-                }
-            })
-            .then(({data}) => {
-                localStorage.access_token = data.access_token
-                localStorage.email = data.email
-                this.changePageProp('home')
-            })
-            .catch(err => {
-                console.log(err.response.data.message)
-            })
-            .then(() => {
-                this.login_email = ''
-                this.login_password = ''
-            }) 
-        },
-        registerBtn() {
-            this.changePageProp('register')
-        }
-    }
+
 }
 </script>
 
 <style>
+    .background-image {
+        background-image: url("mountain2.webp");
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #login-page-css {
+        height: 100vh;
+        min-height: 500px;
+    }
+
+    #login-card {
+        min-width: 20rem !important;
+    }
+
+    #btn-login-submit {
+        color: #212121;
+        padding: 5px 10px;
+        border-color: #DDDDDD;
+        border-radius: 4px;
+        box-shadow: 1px 4px 9px -1px rgba(117,117,117,0.39);
+    }
+
+    #btn-login-submit:hover {
+        box-shadow: 1px 1px 9px 2px rgba(117,117,117,0.39);
+    }
 </style>

@@ -4,7 +4,7 @@
             <div class="card-text">
             Some quick example text to build on the card title and make up the bulk of the card's content.
             </div>
-            <button class="btn" href='#'><i class="fal fa-pencil-alt" aria-hidden="true" style="position:absolute; top:3.7rem; right:2.5rem;"></i></button>
+            <button class="btn" href='#'><i class="fal fa-pencil-alt" aria-hidden="true" style="position:absolute; top:3.7rem; right:2.5rem;" v-bind=""></i></button>
             <button class="btn" href='#'><i class="fal fa-trash-alt" aria-hidden="true" style="position:absolute; top:3.7rem; right:1rem;"></i></button>                  
         </div>
     </div>
@@ -17,5 +17,16 @@ export default {
 </script>
 
 <style>
+    .card {
+        max-width: 15rem;
+    }
 
+    .card-body {
+        padding: 1rem 1.25rem;
+        padding-bottom: 0rem
+    }
+
+    .card-text {
+        font-size:10px; 
+    }
 </style>

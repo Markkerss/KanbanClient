@@ -1,59 +1,72 @@
 <template>
-    <div id="home-page">
-        <h1 id="home-title">Kanban</h1>
-        <h5 id="home-subtitle">Be at peace. Organize life.</h5>
-        <button type="button" class="btn btn-primary" id="btn-login" href='#home-page'>Log in</button>
-        <button type="button" class="btn btn-primary" id="btn-signup" href='#home-page'>Sign Up</button>
+  <div id="boards-page" class="background-image">
+        <button type="button" class="btn btn-primary btn-sm" id="add-task">Add Task</button>
+        <div id="backlog" class="drop-zone">
+            <div class="big-card">
+                <div class="big-card-label">
+                    <p >Backlog</p>             
+                </div>
+                
+            </div>
+        </div>
+        <div id="product" class="drop-zone">
+            <div class="big-card">
+                <div class="big-card-label">
+                    <p>In Progress</p>    
+                </div> 
+               
+            </div>
+        </div>
+        <div id="development" class="drop-zone">
+            <div class="big-card">
+                <div class="big-card-label">
+                    <p>Tested</p>     
+                </div>
+               
+            </div>
+        </div>
+        <div id="done" class="drop-zone">
+            <div class="big-card">
+                <div class="big-card-label">
+                    <p>Done</p>   
+                    <span>
+                        <i class="fal fa-plus fa-lg btn" aria-hidden="true" style="position:relative; top:-0.4rem; right:-9.5rem;"></i>
+                    </span>   
+                </div>
+
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    // name: 'HomePage',
+    // props: ["baseUrl", "addPageProp", "getTasks", "tasks"],
+    // data() {
+    //     return {
+    //         categories: ['backlog', 'todo', 'doing', 'done'],
+    //         editTask: false,
+    //         editedTask: ''
+    //     }
+    // },
+    // methods: {
+    //     editTaskPage (value) {
+    //         this.editTask = value;
+    //     },
+    //     editedTask(value) {
+    //         this.editedTask = value;
+    //     }
+    // },
+    // components: {
+    //     EditTask
+    // },
+    // created() {
+    //     this.getTasks();
+    // }
 }
 </script>
 
 <style>
-    #home-page {
-        background-image: url("mountain2.webp");
-        height: 100%; 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    #home-title {
-        color: whitesmoke;
-        font-size: 4rem;
-        position: absolute;
-        top:  47%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #home-subtitle {
-        color: whitesmoke;
-        position: absolute;
-        top:  57%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #btn-login {
-        font-size: 1rem;
-        position: absolute;
-        top:  67%;
-        left: 45%;
-        transform: translate(-50%, -50%);
-        min-width: 7rem;
-    }
-
-    #btn-signup {
-        font-size: 1rem;
-        position: absolute;
-        top:  67%;
-        left: 55%;
-        transform: translate(-50%, -50%);
-        min-width: 7rem;
-    }
+    
 </style>
